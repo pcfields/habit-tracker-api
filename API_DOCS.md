@@ -2,7 +2,7 @@
 
 ## Base URL
 ```
-http://localhost:3000/api
+http://localhost:4000/api
 ```
 
 ## Authentication
@@ -331,7 +331,7 @@ Content-Type: application/json
 
 ### Register a new user
 ```bash
-curl -X POST http://localhost:3000/api/auth/register \
+curl -X POST http://localhost:4000/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
     "email": "test@example.com",
@@ -344,7 +344,7 @@ curl -X POST http://localhost:3000/api/auth/register \
 
 ### Login
 ```bash
-curl -X POST http://localhost:3000/api/auth/login \
+curl -X POST http://localhost:4000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "test@example.com",
@@ -354,7 +354,7 @@ curl -X POST http://localhost:3000/api/auth/login \
 
 ### Create a habit (replace TOKEN with actual token)
 ```bash
-curl -X POST http://localhost:3000/api/habits \
+curl -X POST http://localhost:4000/api/habits \
   -H "Authorization: Bearer TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -367,13 +367,13 @@ curl -X POST http://localhost:3000/api/habits \
 
 ### Complete a habit
 ```bash
-curl -X POST http://localhost:3000/api/habits/HABIT_ID/complete \
+curl -X POST http://localhost:4000/api/habits/HABIT_ID/complete \
   -H "Authorization: Bearer TOKEN"
 ```
 
 ### Get habit statistics
 ```bash
-curl -X GET http://localhost:3000/api/habits/HABIT_ID/stats \
+curl -X GET http://localhost:4000/api/habits/HABIT_ID/stats \
   -H "Authorization: Bearer TOKEN"
 ```
 
@@ -407,7 +407,7 @@ The API can be extended to support webhooks for the following events:
 ### JavaScript/TypeScript
 ```typescript
 class HabitTrackerAPI {
-  private baseURL = 'http://localhost:3000/api';
+  private baseURL = 'http://localhost:4000/api';
   private token: string | null = null;
 
   async login(email: string, password: string) {
